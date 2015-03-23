@@ -18,12 +18,18 @@ public class GifWrapperController {
 
     @RequestMapping("/")
     public String getGifListView() {
-        return "gifList";
+        return "gifGallery";
     }
 
-    @RequestMapping("/page/{pageNumber}")
+    @RequestMapping("api/page/{pageNumber}")
     @ResponseBody
     public Page<GifWrapper> gifGifList(@PathVariable int pageNumber){
         return repository.findAll(new PageRequest(pageNumber, 10));
+    }
+
+    @RequestMapping("api/gif/{id}")
+    @ResponseBody
+    public GifWrapper gifGif(@PathVariable long id){
+        return repository.findOne(id);
     }
 }

@@ -26,6 +26,10 @@ body {
         width: 90vw;
         height: 90vh;
     }
+    .gif-popup-content{
+        height:100%;
+        margin-bottom: 10px;
+    }
     .gif-image-wrapper{
         border-right:1px solid #e5e5e5;
     }

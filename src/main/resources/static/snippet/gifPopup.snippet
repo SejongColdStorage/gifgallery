@@ -1,0 +1,54 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content gif-popup-content" data-gifwrapper-id="<%= id %>">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h2 class="modal-title gif-popup-title"><%= title %></h2>
+        </div>
+        <div class="modal-body">
+            <div class="col-md-9 gif-image-wrapper">
+                <div class="row text-center">
+                    <!--<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Long_March_2D_launching_VRSS-1.jpg/640px-Long_March_2D_launching_VRSS-1.jpg">-->
+                    <img class="gif-popup-image" src="http://i1.daumcdn.net/thumb/R750x0/?fname=http%3A%2F%2Fcfile30.uf.tistory.com%2Fimage%2F230E8B465325F6591F423F">
+                    <img class="gif-popup-image" src="<%= imageUrl %>">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <div class="btn-group" role="group" >
+                        <button type="button" class="btn btn-default">좋아요</button>
+                        <button type="button" class="btn btn-default">공유</button>
+                    </div>
+                </div>
+                <div>
+                    테스트 | <%= writeDateTime %>
+                </div>
+                <div>
+                    <%= imageWidth %>px &times; <%= imageHeight %>px | <%= imageSize %>Mb
+                </div>
+                <div>
+                    <% for (var idx=0; idx < tags.length; idx++){ %>
+                    <span class="label label-default"><%=tags[idx].tagName%></span>
+                    <% } %>
+                </div>
+                <div>
+                    <%= description %>
+                </div>
+                <hr/>
+                <div>
+                    <div>댓글</div>
+                    <div>댓글</div>
+                    <div>댓글</div>
+                    <div>댓글</div>
+                    <div>댓글</div>
+                    <div>댓글</div>
+                    <div>댓글</div>
+                </div>
+            </div>
+        </div>
+        <!--/.modal-body-->
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog-->
